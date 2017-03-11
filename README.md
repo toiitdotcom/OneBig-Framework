@@ -1,5 +1,4 @@
-# OneBig
-OneBig - Framework PHP
+# OneBig - Framework PHP
 ==========================================
  *        |______1.0.0 #Start 02/05/2016
  *                   | what news ?
