@@ -1,0 +1,1 @@
+<?php $this->view('temp/'.$data['controller'].'/'.$data['action'], $data);
