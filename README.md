@@ -1,5 +1,4 @@
-# OneBig - Framework PHP
-@fameworkName OneBIG - @author by Nhatnv - skype nhat.89
+# OneBIG - @author by Nhatnv - skype nhat.89
 ------------------------------
 
  - 1.0.2 Update 01/02/2017
