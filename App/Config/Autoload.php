@@ -36,12 +36,6 @@ require_once(BASEPATH . '/App/Library/Lib.php');
  */
 require_once(BASEPATH . '/App/Library/Router.php');
 
-/**
- * 
- * @void Load Các Function
- * 
- */
-require_once(BASEPATH . '/App/Library/Func.php');
 
 /**
  * 
