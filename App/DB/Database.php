@@ -47,7 +47,7 @@ Class Database {
         mysqli_set_charset($this->data['connectdb'], 'utf8') or die(mysql_error());
     }
 
-    public function _insert($sql) {
+    private function _insert($sql) {
         $this->connectDb();
         if (mysqli_query($this->data['connectdb'], $sql) === TRUE) {
             return $this->data['connectdb']->insert_id;
@@ -56,7 +56,7 @@ Class Database {
         }
     }
 
-    public function _update($sql) {
+    private function _update($sql) {
         $this->connectDb();
         mysqli_query($this->data['connectdb'], $sql);
         return $this->data['connectdb']->affected_rows;
@@ -116,7 +116,7 @@ Class Database {
             $keys[] = $key;
             $values[] = $value;
         }
-        return Database::_insert('INSERT INTO ' . $table . ' (`' . implode('`, `', $keys) . '`) VALUES ("' . implode('", "', $values) . '")');
+        return $this->_insert('INSERT INTO ' . $table . ' (`' . implode('`, `', $keys) . '`) VALUES ("' . implode('", "', $values) . '")');
     }
 
     public function update($table, $values, $where) {
@@ -124,7 +124,7 @@ Class Database {
         foreach ($values as $key => $val) {
             $valstr[] = '`'.$key . '` = "' . $val .'"';
         }
-        return Database::_update('UPDATE ' . $table . ' SET ' . implode(', ', $valstr)
+        return $this->_update('UPDATE ' . $table . ' SET ' . implode(', ', $valstr)
                 . ' WHERE ' . $where);
     }
 
