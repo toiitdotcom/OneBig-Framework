@@ -1,5 +1,6 @@
 # OneBig - @author by Nhatnv - skype nhat.89
 ------------------------------
+Run test framework: http://yourdomain.com/?action=index
 
  - 1.0.2 Update 01/02/2017
   	+ what news ?
